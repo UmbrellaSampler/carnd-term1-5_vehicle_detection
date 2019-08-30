@@ -106,7 +106,7 @@ In section "Training a linear SVC" in the Jupyter notebook I trained a linear SV
 
 #### 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
-The code that implements the sliding window search is defined in the first cell of section "Sliding Window Search" in the Jupyter notebook. As first step all possible window candidates are determined in the function `slide_window()`. In my case I decided to perform two searches with different window dimension: `xy_windows = [(96, 96), (64, 64)]` (line 12-24, 2nd cell in section "Sliding Window Search" ) which significantly improved the car finding performance. In the function `search_windows()` all images found in these windows are predicted using the SVC classifier. Positivley classified (we found a car) windows are collected and returned. An example result can be seen in this image:
+The code that implements the sliding window search is defined in the first cell of section "Sliding Window Search" in the Jupyter notebook. As first step all possible window candidates are determined in the function `slide_window()`. In my case I decided to perform two searches with different window dimension: `xy_windows = [(96, 96), (64, 64)]` (line 7-22, 2nd cell in section "Sliding Window Search" ) which significantly improved the car finding performance. In the function `search_windows()` all images found in these windows are predicted using the SVC classifier. Positivley classified (we found a car) windows are collected and returned. An example result can be seen in this image:
 
 ![alt text][image8]
 
